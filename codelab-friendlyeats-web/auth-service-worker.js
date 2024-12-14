@@ -12,6 +12,13 @@ self.addEventListener('install', event => {
   if (!serializedFirebaseConfig) {
     throw new Error('Firebase Config object not found in service worker query string.');
   }
+
+  if(!firebaseConfig){
+    const serializedFirebaseConfig = new URL(location).searchParams.get(
+      "firebaseConfig"
+    );
+    firebaseConfig = JSON.parse(serializedFirebaseConfig);
+  }
   
   firebaseConfig = JSON.parse(serializedFirebaseConfig);
   console.log("Service worker installed with Firebase config", firebaseConfig);
