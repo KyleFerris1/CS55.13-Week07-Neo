@@ -1,2 +1,16 @@
+env:
+  # Get these values from the Firebase console
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: "AIzaSyDh4GhS_Sgvco56d8FCzZzzFvWe6uBdZVY"
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "cs5513-week07-neo.firebaseapp.com"
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "cs5513-week07-neo"
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "cs5513-week07-neo.firebasestorage.app"
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "38254430342"
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:38254430342:web:3af5ed4c582c20ddee6907"
 
-# Configuration moved to Replit Secrets
+    
