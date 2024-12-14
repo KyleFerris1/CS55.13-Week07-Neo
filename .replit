@@ -1,5 +1,6 @@
-run = "npm run dev"
-entrypoint = "index.js"
+
+run = "cd codelab-friendlyeats-web && npm run dev"
+entrypoint = "codelab-friendlyeats-web/src/app/page.js"
 modules = ["nodejs-20:v9-20231020-a3526c9"]
 hidden = [".config", "package-lock.json", ".next", ".swc"]
 
@@ -10,13 +11,21 @@ channel = "stable-23_05"
 NEXT_TELEMETRY_DISABLED = "1"
 
 [deployment]
-build = ["npm", "run", "build"]
-run = ["npm", "run", "start"]
+build = ["cd codelab-friendlyeats-web", "npm install", "npm run build"]
+run = ["cd codelab-friendlyeats-web", "npm run start"]
 deploymentTarget = "cloudrun"
 
 [[ports]]
 localPort = 3000
 externalPort = 80
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 3002
+externalPort = 3002
 
 [[ports]]
 localPort = 9005
