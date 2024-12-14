@@ -1,36 +1,36 @@
 
-run = "cd codelab-friendlyeats-web && npm run dev"
-entrypoint = "codelab-friendlyeats-web/src/app/page.js"
-modules = ["nodejs-20:v9-20231020-a3526c9"]
-hidden = [".config", "package-lock.json", ".next", ".swc"]
+# run = "cd codelab-friendlyeats-web && npm run dev"
+# entrypoint = "codelab-friendlyeats-web/src/app/page.js"
+# modules = ["nodejs-20:v9-20231020-a3526c9"]
+# hidden = [".config", "package-lock.json", ".next", ".swc"]
 
-[nix]
-channel = "stable-23_05"
+# [nix]
+# channel = "stable-23_05"
 
-[env]
-NEXT_TELEMETRY_DISABLED = "1"
+# [env]
+# NEXT_TELEMETRY_DISABLED = "1"
 
-[deployment]
-build = ["cd codelab-friendlyeats-web", "npm install", "npm run build"]
-run = ["cd codelab-friendlyeats-web", "npm run start"]
-deploymentTarget = "cloudrun"
+# [deployment]
+# build = ["cd codelab-friendlyeats-web", "npm install", "npm run build"]
+# run = ["cd codelab-friendlyeats-web", "npm run start"]
+# deploymentTarget = "cloudrun"
 
-[[ports]]
-localPort = 3000
-externalPort = 80
+# [[ports]]
+# localPort = 3000
+# externalPort = 80
 
-[[ports]]
-localPort = 3001
-externalPort = 3001
+# [[ports]]
+# localPort = 3001
+# externalPort = 3001
 
-[[ports]]
-localPort = 3002
-externalPort = 3002
+# [[ports]]
+# localPort = 3002
+# externalPort = 3002
 
-[[ports]]
-localPort = 3003
-externalPort = 3003
+# [[ports]]
+# localPort = 3003
+# externalPort = 3003
 
-[[ports]]
-localPort = 9005
-externalPort = 3000
+# [[ports]]
+# localPort = 9005
+# externalPort = 3000
